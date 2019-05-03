@@ -1,0 +1,6 @@
+framework module Pods_Eventoo {
+  umbrella header "Pods-Eventoo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		470D7DEB227084E200695CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470D7DEA227084E200695CED /* AppDelegate.swift */; };
+		470D7DF0227084E200695CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470D7DEE227084E200695CED /* Main.storyboard */; };
+		470D7DF2227084E300695CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470D7DF1227084E300695CED /* Assets.xcassets */; };
+		470D7DF5227084E300695CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470D7DF3227084E300695CED /* LaunchScreen.storyboard */; };
+		47335DD52270B33500A3F150 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DD42270B33500A3F150 /* HomeViewController.swift */; };
+		47335DD72270B34200A3F150 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DD62270B34200A3F150 /* AddEventViewController.swift */; };
+		47335DD92270B35500A3F150 /* DivisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DD82270B35500A3F150 /* DivisionViewController.swift */; };
+		47335DDB2270B36C00A3F150 /* DivisionTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DDA2270B36C00A3F150 /* DivisionTaskViewController.swift */; };
+		47335DE02270B40D00A3F150 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DDF2270B40D00A3F150 /* AddTaskViewController.swift */; };
+		47335DE32270B45100A3F150 /* IndividualTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DE22270B45100A3F150 /* IndividualTaskViewController.swift */; };
+		47335DE9227199F700A3F150 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47335DE8227199F700A3F150 /* DataManager.swift */; };
+		4738EA152273034300955C22 /* DivisionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738EA142273034300955C22 /* DivisionDetailViewController.swift */; };
+		4738EA1822730D1600955C22 /* DivisionEachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738EA1722730D1600955C22 /* DivisionEachViewController.swift */; };
+		4738EA1A2273278900955C22 /* LaunchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738EA192273278900955C22 /* LaunchUser.swift */; };
+		478788DE22772485000C92ED /* CustomAllDivisionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478788DC22772485000C92ED /* CustomAllDivisionTableViewCell.swift */; };
+		478788DF22772485000C92ED /* CustomAllDivisionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478788DD22772485000C92ED /* CustomAllDivisionTableViewCell.xib */; };
+		478788E222772553000C92ED /* CustomDivisionAllTaskTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478788E022772553000C92ED /* CustomDivisionAllTaskTableCell.swift */; };
+		478788E322772553000C92ED /* CustomDivisionAllTaskTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478788E122772553000C92ED /* CustomDivisionAllTaskTableCell.xib */; };
+		478788E622772595000C92ED /* CustomIndividualTaskTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478788E422772595000C92ED /* CustomIndividualTaskTableCell.swift */; };
+		478788E722772595000C92ED /* CustomIndividualTaskTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478788E522772595000C92ED /* CustomIndividualTaskTableCell.xib */; };
+		478788EA22772749000C92ED /* customUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478788E822772749000C92ED /* customUserCell.swift */; };
+		478788EB22772749000C92ED /* customUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478788E922772749000C92ED /* customUserCell.xib */; };
+		478788EE22772D90000C92ED /* customMemberViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478788EC22772D90000C92ED /* customMemberViewCell.xib */; };
+		478788EF22772D90000C92ED /* customMemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478788ED22772D90000C92ED /* customMemberViewCell.swift */; };
+		47D9A146227BFCFB00088C16 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A145227BFCFB00088C16 /* TaskDetailViewController.swift */; };
+		975D0AA8EF931B6A5322447C /* Pods_Eventoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18A6CCCA027FF41216462E8 /* Pods_Eventoo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		35008D413FA60C77B0B3C115 /* Pods-Eventoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventoo.release.xcconfig"; path = "Target Support Files/Pods-Eventoo/Pods-Eventoo.release.xcconfig"; sourceTree = "<group>"; };
+		470D7DE7227084E200695CED /* Eventoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		470D7DEA227084E200695CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		470D7DEF227084E200695CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		470D7DF1227084E300695CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		470D7DF4227084E300695CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		470D7DF6227084E300695CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47335DD42270B33500A3F150 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		47335DD62270B34200A3F150 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		47335DD82270B35500A3F150 /* DivisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionViewController.swift; sourceTree = "<group>"; };
+		47335DDA2270B36C00A3F150 /* DivisionTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionTaskViewController.swift; sourceTree = "<group>"; };
+		47335DDF2270B40D00A3F150 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		47335DE22270B45100A3F150 /* IndividualTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTaskViewController.swift; sourceTree = "<group>"; };
+		47335DE8227199F700A3F150 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4738EA142273034300955C22 /* DivisionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionDetailViewController.swift; sourceTree = "<group>"; };
+		4738EA1722730D1600955C22 /* DivisionEachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionEachViewController.swift; sourceTree = "<group>"; };
+		4738EA192273278900955C22 /* LaunchUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUser.swift; sourceTree = "<group>"; };
+		478788DC22772485000C92ED /* CustomAllDivisionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomAllDivisionTableViewCell.swift; path = Eventoo/View/CustomAllDivisionTableViewCell/CustomAllDivisionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		478788DD22772485000C92ED /* CustomAllDivisionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomAllDivisionTableViewCell.xib; path = Eventoo/View/CustomAllDivisionTableViewCell/CustomAllDivisionTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		478788E022772553000C92ED /* CustomDivisionAllTaskTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivisionAllTaskTableCell.swift; sourceTree = "<group>"; };
+		478788E122772553000C92ED /* CustomDivisionAllTaskTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDivisionAllTaskTableCell.xib; sourceTree = "<group>"; };
+		478788E422772595000C92ED /* CustomIndividualTaskTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndividualTaskTableCell.swift; sourceTree = "<group>"; };
+		478788E522772595000C92ED /* CustomIndividualTaskTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomIndividualTaskTableCell.xib; sourceTree = "<group>"; };
+		478788E822772749000C92ED /* customUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUserCell.swift; sourceTree = "<group>"; };
+		478788E922772749000C92ED /* customUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customUserCell.xib; sourceTree = "<group>"; };
+		478788EC22772D90000C92ED /* customMemberViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = customMemberViewCell.xib; path = Eventoo/View/CustomCell/customMemberViewCell.xib; sourceTree = SOURCE_ROOT; };
+		478788ED22772D90000C92ED /* customMemberViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customMemberViewCell.swift; path = Eventoo/View/CustomCell/customMemberViewCell.swift; sourceTree = SOURCE_ROOT; };
+		47D9A145227BFCFB00088C16 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		4838EAE4493A8E5B6D89477F /* Pods-Eventoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventoo.debug.xcconfig"; path = "Target Support Files/Pods-Eventoo/Pods-Eventoo.debug.xcconfig"; sourceTree = "<group>"; };
+		E18A6CCCA027FF41216462E8 /* Pods_Eventoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		470D7DE4227084E200695CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975D0AA8EF931B6A5322447C /* Pods_Eventoo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		470D7DDE227084E200695CED = {
+			isa = PBXGroup;
+			children = (
+				470D7DE9227084E200695CED /* Eventoo */,
+				470D7DE8227084E200695CED /* Products */,
+				7CB76373C3B1A76BE432B0A0 /* Frameworks */,
+				74CD208B9C4DB97207F930AC /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		470D7DE8227084E200695CED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				470D7DE7227084E200695CED /* Eventoo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		470D7DE9227084E200695CED /* Eventoo */ = {
+			isa = PBXGroup;
+			children = (
+				47335DCF2270A47D00A3F150 /* View */,
+				47335DD12270A49100A3F150 /* Controller */,
+				47335DD02270A48C00A3F150 /* Model */,
+				470D7DF1227084E300695CED /* Assets.xcassets */,
+				470D7DF6227084E300695CED /* Info.plist */,
+			);
+			path = Eventoo;
+			sourceTree = "<group>";
+		};
+		47335DCF2270A47D00A3F150 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47335DF22271CF0500A3F150 /* CustomCell */,
+				470D7DEE227084E200695CED /* Main.storyboard */,
+				470D7DF3227084E300695CED /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47335DD02270A48C00A3F150 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47335DE8227199F700A3F150 /* DataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47335DD12270A49100A3F150 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				470D7DEA227084E200695CED /* AppDelegate.swift */,
+				47335DE12270B42B00A3F150 /* Home & Event */,
+				47335DDE2270B3F600A3F150 /* Division & Individual */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47335DDE2270B3F600A3F150 /* Division & Individual */ = {
+			isa = PBXGroup;
+			children = (
+				47335DE22270B45100A3F150 /* IndividualTaskViewController.swift */,
+				47335DDF2270B40D00A3F150 /* AddTaskViewController.swift */,
+				47335DD82270B35500A3F150 /* DivisionViewController.swift */,
+				47335DDA2270B36C00A3F150 /* DivisionTaskViewController.swift */,
+				4738EA142273034300955C22 /* DivisionDetailViewController.swift */,
+				4738EA1722730D1600955C22 /* DivisionEachViewController.swift */,
+				4738EA192273278900955C22 /* LaunchUser.swift */,
+				47D9A145227BFCFB00088C16 /* TaskDetailViewController.swift */,
+			);
+			path = "Division & Individual";
+			sourceTree = "<group>";
+		};
+		47335DE12270B42B00A3F150 /* Home & Event */ = {
+			isa = PBXGroup;
+			children = (
+				47335DD42270B33500A3F150 /* HomeViewController.swift */,
+				47335DD62270B34200A3F150 /* AddEventViewController.swift */,
+			);
+			path = "Home & Event";
+			sourceTree = "<group>";
+		};
+		47335DF22271CF0500A3F150 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				478788ED22772D90000C92ED /* customMemberViewCell.swift */,
+				478788EC22772D90000C92ED /* customMemberViewCell.xib */,
+				478788DC22772485000C92ED /* CustomAllDivisionTableViewCell.swift */,
+				478788DD22772485000C92ED /* CustomAllDivisionTableViewCell.xib */,
+				478788E022772553000C92ED /* CustomDivisionAllTaskTableCell.swift */,
+				478788E122772553000C92ED /* CustomDivisionAllTaskTableCell.xib */,
+				478788E422772595000C92ED /* CustomIndividualTaskTableCell.swift */,
+				478788E522772595000C92ED /* CustomIndividualTaskTableCell.xib */,
+				478788E822772749000C92ED /* customUserCell.swift */,
+				478788E922772749000C92ED /* customUserCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		74CD208B9C4DB97207F930AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4838EAE4493A8E5B6D89477F /* Pods-Eventoo.debug.xcconfig */,
+				35008D413FA60C77B0B3C115 /* Pods-Eventoo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7CB76373C3B1A76BE432B0A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18A6CCCA027FF41216462E8 /* Pods_Eventoo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		470D7DE6227084E200695CED /* Eventoo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 470D7DF9227084E300695CED /* Build configuration list for PBXNativeTarget "Eventoo" */;
+			buildPhases = (
+				D34516587627E0B1C54FBB0D /* [CP] Check Pods Manifest.lock */,
+				470D7DE3227084E200695CED /* Sources */,
+				470D7DE4227084E200695CED /* Frameworks */,
+				470D7DE5227084E200695CED /* Resources */,
+				35E90E16B2E58B0FEE6BC0AD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eventoo;
+			productName = Eventoo;
+			productReference = 470D7DE7227084E200695CED /* Eventoo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		470D7DDF227084E200695CED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Mentimun Mulus";
+				TargetAttributes = {
+					470D7DE6227084E200695CED = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 470D7DE2227084E200695CED /* Build configuration list for PBXProject "Eventoo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 470D7DDE227084E200695CED;
+			productRefGroup = 470D7DE8227084E200695CED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				470D7DE6227084E200695CED /* Eventoo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		470D7DE5227084E200695CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				470D7DF5227084E300695CED /* LaunchScreen.storyboard in Resources */,
+				470D7DF2227084E300695CED /* Assets.xcassets in Resources */,
+				478788E322772553000C92ED /* CustomDivisionAllTaskTableCell.xib in Resources */,
+				478788DF22772485000C92ED /* CustomAllDivisionTableViewCell.xib in Resources */,
+				470D7DF0227084E200695CED /* Main.storyboard in Resources */,
+				478788EB22772749000C92ED /* customUserCell.xib in Resources */,
+				478788E722772595000C92ED /* CustomIndividualTaskTableCell.xib in Resources */,
+				478788EE22772D90000C92ED /* customMemberViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35E90E16B2E58B0FEE6BC0AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventoo/Pods-Eventoo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eventoo/Pods-Eventoo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D34516587627E0B1C54FBB0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eventoo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		470D7DE3227084E200695CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				478788DE22772485000C92ED /* CustomAllDivisionTableViewCell.swift in Sources */,
+				47335DDB2270B36C00A3F150 /* DivisionTaskViewController.swift in Sources */,
+				47335DE9227199F700A3F150 /* DataManager.swift in Sources */,
+				47D9A146227BFCFB00088C16 /* TaskDetailViewController.swift in Sources */,
+				478788EF22772D90000C92ED /* customMemberViewCell.swift in Sources */,
+				4738EA1822730D1600955C22 /* DivisionEachViewController.swift in Sources */,
+				47335DE32270B45100A3F150 /* IndividualTaskViewController.swift in Sources */,
+				47335DD92270B35500A3F150 /* DivisionViewController.swift in Sources */,
+				47335DD72270B34200A3F150 /* AddEventViewController.swift in Sources */,
+				470D7DEB227084E200695CED /* AppDelegate.swift in Sources */,
+				4738EA1A2273278900955C22 /* LaunchUser.swift in Sources */,
+				4738EA152273034300955C22 /* DivisionDetailViewController.swift in Sources */,
+				47335DD52270B33500A3F150 /* HomeViewController.swift in Sources */,
+				478788E222772553000C92ED /* CustomDivisionAllTaskTableCell.swift in Sources */,
+				47335DE02270B40D00A3F150 /* AddTaskViewController.swift in Sources */,
+				478788E622772595000C92ED /* CustomIndividualTaskTableCell.swift in Sources */,
+				478788EA22772749000C92ED /* customUserCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		470D7DEE227084E200695CED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				470D7DEF227084E200695CED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		470D7DF3227084E300695CED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				470D7DF4227084E300695CED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		470D7DF7227084E300695CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		470D7DF8227084E300695CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		470D7DFA227084E300695CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4838EAE4493A8E5B6D89477F /* Pods-Eventoo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7K72X54MJB;
+				INFOPLIST_FILE = Eventoo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mentimunmulus.Eventoo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		470D7DFB227084E300695CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35008D413FA60C77B0B3C115 /* Pods-Eventoo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7K72X54MJB;
+				INFOPLIST_FILE = Eventoo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mentimunmulus.Eventoo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		470D7DE2227084E200695CED /* Build configuration list for PBXProject "Eventoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				470D7DF7227084E300695CED /* Debug */,
+				470D7DF8227084E300695CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		470D7DF9227084E300695CED /* Build configuration list for PBXNativeTarget "Eventoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				470D7DFA227084E300695CED /* Debug */,
+				470D7DFB227084E300695CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 470D7DDF227084E200695CED /* Project object */;
+}
