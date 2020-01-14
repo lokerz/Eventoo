@@ -54,6 +54,7 @@ class IndividualTaskViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBAction func userButton(_ sender: UIBarButtonItem) {
         launchSystem.showUser()
+        print(DataManager.shared.memberArr)
     }
     
     @objc func loadData(){

@@ -20,7 +20,7 @@ class AddTaskViewController: UIViewController,UITableViewDelegate, UITableViewDa
     @IBOutlet weak var taskMemberTable: UITableView!
     
     @IBAction func addTaskButton(_ sender: UIButton) {
-        let task = Task(taskID: DataManager.shared.taskArr.count, taskName: taskNameField.text!.capitalized, taskMember: tempMemberArr, taskDivision: DataManager.shared.currentDivision!, taskDeadline: taskDeadline.date, taskDetail: taskDetailField.text!, taskDone: false)
+        let task = Task(taskName: taskNameField.text!.capitalized, taskMember: tempMemberArr, taskDivision: DataManager.shared.currentDivision!, taskDeadline: taskDeadline.date, taskDetail: taskDetailField.text!, taskDone: false)
         
         for tempMember in tempMemberArr{
             var memberExist = false
@@ -55,7 +55,7 @@ class AddTaskViewController: UIViewController,UITableViewDelegate, UITableViewDa
             if memberExist != 99 {
                 tempMemberArr.append(DataManager.shared.memberArr[memberExist])
             }else{
-                let member = Member(memberID: DataManager.shared.memberArr.count, memberDivision: DataManager.shared.currentDivision!, memberName: memberName)
+                let member = Member( memberDivision: DataManager.shared.currentDivision!, memberName: memberName)
                 tempMemberArr.append(member)
             }
             taskMemberField.text = ""
@@ -65,6 +65,7 @@ class AddTaskViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         taskDetailField.borderStyle = UITextField.BorderStyle.roundedRect
         taskDeadline.datePickerMode = UIDatePicker.Mode.date
       

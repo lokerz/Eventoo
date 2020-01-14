@@ -6,7 +6,6 @@
 //  Copyright © 2019 Mentimun Mulus. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class TaskDetailViewController : UIViewController {
@@ -30,11 +29,25 @@ class TaskDetailViewController : UIViewController {
         
     }
     
+    
     @IBAction func taskDoneButton(_ sender: UIButton) {
+        for i in 0...DataManager.shared.taskArr.count - 1{
+            if DataManager.shared.taskArr[i] == DataManager.shared.currentTask{
+                DataManager.shared.taskArr[i].taskDone = true
+            }
+        }
         DataManager.shared.saveData()
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func taskRemoveButton(_ sender: UIButton) {
+        for i in 0...DataManager.shared.taskArr.count - 1{
+            if DataManager.shared.taskArr[i] == DataManager.shared.currentTask{
+                DataManager.shared.taskArr.remove(at: i)
+                break
+            }
+        }
         DataManager.shared.saveData()
+        navigationController?.popViewController(animated: true)
 
     }
     

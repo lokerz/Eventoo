@@ -43,12 +43,20 @@ class DivisionViewController: UIViewController, UITableViewDelegate, UITableView
         })
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            
+            var divisionExist = false
             if let name = alert.textFields?.first?.text {
                 if let leader = alert.textFields?[1].text{
-                    let tempDivision = Division (divisionID : DataManager.shared.divisionArr.count, divisionName : name, divisionLeader : leader)
-                    DataManager.shared.divisionArr.append(tempDivision)
-                    DataManager.shared.saveData()
+                    let tempDivision = Division (divisionName : name, divisionLeader : leader)
+                    for division in DataManager.shared.divisionArr{
+                        if division == tempDivision{
+                            divisionExist = true
+                            break
+                        }
+                    }
+                    if !divisionExist {
+                        DataManager.shared.divisionArr.append(tempDivision)
+                        DataManager.shared.saveData()
+                    }
                     self.divisionTable.reloadData()
                 }
             }

@@ -35,7 +35,7 @@ class HomeViewController: UIViewController{
         
         //Large Titles
     self.navigationController?.navigationBar.prefersLargeTitles = true
-    self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+    self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         navigationItem.title = DataManager.shared.eventArr[0].eventName
         eventOrganizerLabel.text = DataManager.shared.eventArr[0].eventLeader

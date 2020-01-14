@@ -17,7 +17,10 @@ class DivisionTaskViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         individualDivisionTable.register(UINib(nibName: "CustomDivisionAllTaskTableCell", bundle: nil), forCellReuseIdentifier: "CustomDivisionAllTaskTableCell")
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        
+        individualDivisionTable.register(UINib(nibName: "CustomDivisionAllTaskTableCell", bundle: nil), forCellReuseIdentifier: "CustomDivisionAllTaskTableCell")
     }
 
     override func viewWillAppear(_ animated: Bool) {

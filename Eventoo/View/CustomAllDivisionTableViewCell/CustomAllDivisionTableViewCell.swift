@@ -18,8 +18,7 @@ class AllTaskTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var cellView: UIView!
     
-    var divisionID = 0
-    
+    var currentDivision : Division?
     override func awakeFromNib() {
         super.awakeFromNib()
         cellView.layer.cornerRadius = 10
@@ -34,7 +33,7 @@ class AllTaskTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     func setCell(division : Division){
         var taskDone = 0
         var taskTotal = 0
-        divisionID = division.divisionID
+        currentDivision = division
         divisionNameLabel.text = division.divisionName
         leadPersonLabel.text = division.divisionLeader
         for task in DataManager.shared.taskArr{
@@ -64,7 +63,7 @@ class AllTaskTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var count = 0
         for member in DataManager.shared.memberArr{
-            if member.memberDivision.divisionID == divisionID{
+            if member.memberDivision == currentDivision{
                 count += 1
             }
         }
@@ -75,7 +74,7 @@ class AllTaskTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         let cell = collectionInitialPerson.dequeueReusableCell(withReuseIdentifier: "customMemberViewCell", for: indexPath) as! customMemberViewCell
         var currentTaskRow = 0
         for i in 0...DataManager.shared.memberArr.count - 1{
-            if (DataManager.shared.memberArr[i].memberDivision.divisionID == divisionID){
+            if (DataManager.shared.memberArr[i].memberDivision == currentDivision){
                 currentTaskRow = i
                 break
             }

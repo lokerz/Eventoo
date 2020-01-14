@@ -27,6 +27,7 @@ class DataManager: NSObject {
     var newsArr : [News] = []
     
     var currentEvent : Event?
+    
     var currentDivision : Division?
     var currentMember : Member?
     var currentTask : Task?
@@ -70,54 +71,52 @@ class DataManager: NSObject {
     
     func dummyData(){
         
-        let dummyEvent = Event(eventID : 0, eventName : "Technopreneur", eventLeader: "Himpunan Mahasiswa Manajemen dan Ekonomi",eventDate: Date.init(timeIntervalSinceNow: 10368000) ,eventProgress: 0.0)
+        let dummyEvent = Event(eventName : "Technopreneur", eventLeader: "Himpunan Mahasiswa Manajemen dan Ekonomi",eventDate: Date.init(timeIntervalSinceNow: 10368000) ,eventProgress: 0.0)
         DataManager.shared.eventArr.append(dummyEvent)
 
-        let dummyNews  = News(newsID: 0, newsEvent: dummyEvent, newsTitle: "Sponsorship", newsWriter: nil, newsContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+        let dummyNews  = News(newsEvent: dummyEvent, newsTitle: "Sponsorship", newsWriter: nil, newsContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
         DataManager.shared.newsArr.append(dummyNews)
         
     }
 }
 
     struct Member : Codable, Equatable{
-        var memberID : Int
         var memberDivision : Division
         var memberName : String
         static func == (member1 : Member, member2 : Member) -> Bool{
-            return (member1.memberID == member2.memberID && member1.memberName == member2.memberName)
+            return (member1.memberName.lowercased() == member2.memberName.lowercased())
         }
     }
 
     struct News : Codable, Equatable{
-        var newsID : Int
         var newsEvent : Event
         var newsTitle : String
         var newsWriter : Member?
         var newsContent : String
+        static func == (news1 : News, news2 : News) -> Bool{
+            return (news1.newsTitle.lowercased() == news2.newsTitle.lowercased())
+        }
     }
 
     struct Event : Codable, Equatable{
-        var eventID : Int
         var eventName : String
-        var eventLeader :String
+        var eventLeader : String
         var eventDate : Date
         var eventProgress : Double
         static func == (event1 : Event, event2 : Event) -> Bool{
-            return (event1.eventID == event2.eventID && event1.eventName == event2.eventName && event1.eventLeader == event2.eventLeader)
+            return (event1.eventName.lowercased() == event2.eventName.lowercased() && event1.eventLeader == event2.eventLeader)
         }
     }
     
     struct Division : Codable, Equatable {
-        var divisionID : Int
         var divisionName : String
         var divisionLeader : String
         static func == (division1 :Division, division2 : Division) ->Bool{
-            return(division1.divisionID == division2.divisionID && division1.divisionName == division2.divisionName)
+            return(division1.divisionName.lowercased() == division2.divisionName.lowercased())
         }
     }
 
-    struct Task : Codable, Equatable {
-        var taskID : Int
+    struct Task : Codable, Equatable{
         var taskName : String
         var taskMember : [Member]
         var taskDivision : Division
@@ -125,7 +124,7 @@ class DataManager: NSObject {
         var taskDetail : String
         var taskDone : Bool = false
         static func == (task1 : Task, task2: Task) -> Bool {
-            return (task1.taskID == task2.taskID && task1.taskName == task2.taskName)
+            return (task1.taskName.lowercased() == task2.taskName.lowercased() && task1.taskDivision == task2.taskDivision)
         }
     }
     

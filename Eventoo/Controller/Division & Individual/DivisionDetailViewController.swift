@@ -15,12 +15,21 @@ class DivisionDetailViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var divLeader: UITextField!
     
     @IBAction func deleteDivision(_ sender: UIButton) {
+        var tempMemberArr : [Member] = []
+        if DataManager.shared.memberArr.count > 0{
+            for member in DataManager.shared.memberArr{
+                if member.memberDivision != DataManager.shared.currentDivision{
+                    tempMemberArr.append(member)
+                }
+            }
+        }
         for i in 0...DataManager.shared.divisionArr.count - 1{
             if DataManager.shared.divisionArr[i] == DataManager.shared.currentDivision{
                 DataManager.shared.divisionArr.remove(at: i)
                 break
             }
         }
+        DataManager.shared.memberArr = tempMemberArr
         DataManager.shared.saveData()
         
  navigationController?.popViewController(animated: true)
@@ -29,16 +38,28 @@ class DivisionDetailViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var addMemberField: UITextField!
     
     @IBAction func addMemberButton(_ sender: UIButton) {
+        var memberExist = false
         if addMemberField.text != ""{
-        if let addMemberText = addMemberField.text{
-            let tempMember = Member(memberID: DataManager.shared.memberArr.count, memberDivision: DataManager.shared.currentDivision!, memberName: addMemberText)
-            DataManager.shared.memberArr.append(tempMember)
-            addMemberField.text = ""
-            let subviews = memberListView.subviews
-            for view in subviews{
-                view.removeFromSuperview()
+            if let memberName = addMemberField.text{
+                if DataManager.shared.memberArr.count > 0{
+                    for i in 0...DataManager.shared.memberArr.count - 1{
+                        if DataManager.shared.memberArr[i].memberName == memberName {
+                            memberExist = true
+                            break
+                        }
+                    }
+                }
+                if !memberExist {
+                    let tempMember = Member(memberDivision: DataManager.shared.currentDivision!, memberName: memberName)
+                    DataManager.shared.memberArr.append(tempMember)
+                }
+                addMemberField.text = ""
+            
+                let subviews = memberListView.subviews
+                for view in subviews{
+                    view.removeFromSuperview()
+                }
             }
-        }
         }
         DataManager.shared.saveData()
         memberListView.reloadData()
@@ -71,14 +92,23 @@ class DivisionDetailViewController: UIViewController, UICollectionViewDataSource
     }
     
     @objc func editNameEnd(){
+//        if DataManager.shared.memberArr != nil{
+//            for member in DataManager.shared.memberArr{
+//                if member.memberDivision == DataManager.shared.currentDivision{
+//                    member.memberDivision.divisionName = divName.text!
+//
+//                }
+//            }
+//        }
         for i in 0...DataManager.shared.divisionArr.count - 1{
             if DataManager.shared.divisionArr[i] == DataManager.shared.currentDivision{
             DataManager.shared.currentDivision?.divisionName = divName.text!
             DataManager.shared.divisionArr[i].divisionName = divName.text!
                 
-                DataManager.shared.saveData()
+                
             }
         }
+        DataManager.shared.saveData()
     }
     @objc func editNameCurrent(){
         parent?.navigationItem.title = divName.text
@@ -89,9 +119,9 @@ class DivisionDetailViewController: UIViewController, UICollectionViewDataSource
             if DataManager.shared.divisionArr[i] == DataManager.shared.currentDivision{
                 DataManager.shared.currentDivision?.divisionLeader = divLeader.text!
                 DataManager.shared.divisionArr[i].divisionLeader = divLeader.text!
-                DataManager.shared.saveData()
             }
         }
+        DataManager.shared.saveData()
     }
     
     
